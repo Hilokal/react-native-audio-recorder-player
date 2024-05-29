@@ -369,6 +369,7 @@ class RNAudioRecorderPlayer: RCTEventEmitter, AVAudioRecorderDelegate {
                     "isMuted": self.audioPlayer.isMuted,
                     "currentPosition": self.audioPlayerItem.currentTime().seconds * 1000,
                     "duration": self.audioPlayerItem.asset.duration.seconds * 1000,
+                    "isFinished": false,
                 ])
             }
         }
@@ -422,6 +423,7 @@ class RNAudioRecorderPlayer: RCTEventEmitter, AVAudioRecorderDelegate {
                 "isMuted": self.audioPlayer?.isMuted as Any,
                 "currentPosition": duration,
                 "duration": duration,
+                "isFinished": true,
             ])
         }
     }
